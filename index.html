@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        #pic {
+            display: flex;
+            margin-inline: auto;
+            margin-top: 40px;
+        }
+
+        #btn {
+            display: flex;
+            margin-inline: auto;
+            margin-top: 20px;
+            padding: 0.8rem 0.5rem;
+            font-size: 2rem;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+
+        }
+
+        .btnBg {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="body" style="background-color: black;">
+    <img id="pic" src="pic_bulboff.gif" alt="" srcset="">
+    <button id="btn" onclick="turnOnOff()">Turn On</button>
+
+    <script>
+        btn = document.getElementById("btn");
+        pic = document.getElementById("pic");
+        body = document.getElementById("body");
+
+        function turnOnOff() {
+            if (body.style.backgroundColor === "black") {
+                body.style.backgroundColor = "#FAEA48";
+                pic.src = "pic_bulbon.gif";
+                btn.innerHTML = "Turn Off";
+                btn.classList.add("btnBg");
+            }
+            else {
+                body.style.backgroundColor = "black";
+                pic.src = "pic_bulboff.gif";
+                btn.innerHTML = "Turn On"
+                btn.classList.remove("btnBg");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
